@@ -1,21 +1,21 @@
-s: str = input('Введите начало и ĸонец диапазона загаданного числа: ')
-s: list = s.split()
+s = input('Введите начало и ĸонец диапазона загаданного числа: ')
+s = s.split()
 
 if s[0] > s[1]:
     print('Некоректный ввод чисел')
 
-length: int = len(s)
+length = len(s)
 
 count = 0
 
-left: int = 0
-right: int = int(s[1]) - 1
+left = 0
+right = int(s[1]) - 1
 while left < right:
     count += 1
-    if count >= 7:
+    if count > 7:
         break
-    middle: int = (left + right) // 2
-    print(s[middle])
+    middle = (left + right) // 2 + 1
+    print(middle)
     i = input()
     if i == 'больше':
         left = middle + 1
